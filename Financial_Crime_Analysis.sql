@@ -33,6 +33,12 @@ Where Province='Free State';
 SELECT COUNT (RecordID) AS WesternCape
 FROM crime_table
 Where Province='Western Cape';
+
+-- New Question 3
+Select Province ,count(RecordID) As numOfCases
+from crime_table
+group by Province;
+
 --4. Retrieve all cases where the crime type is Fraud.
 SELECT * from crime_table
 Where CrimeType='Fraud';
@@ -49,7 +55,9 @@ from crime_table;
 --8. Find the highest Estimated Fraud Amount recorded.
 
 --9. Retrieve the top 10 cases with the highest Estimated Fraud Amount.
+
 --10. Display all cases where the suspect was arrested.
+
 --11. Count how many suspects were arrested versus not arrested.
 SELECT Count (RecordID) AS Arrested
 from crime_table
@@ -59,6 +67,7 @@ from crime_table
 WHere Arrested = 0;
 
 --12. Count the number of cases associated with each bank.
+
 --13. Calculate the total Estimated Fraud Amount per province.
 Select Distinct Province from crime_table;
 Select SUM(EstimatedFraudAmount_ZAR) AS KwaZulu
@@ -145,6 +154,7 @@ Where CrimeDate LIKE '202%'
 Select *
 from crime_table
 Where PreviousOffenses>3;
+
 --19. Show the distribution of cases by Risk Level.
 Select distinct RiskLevel from crime_table;
 
@@ -170,6 +180,7 @@ Where RecordID > 0;
 --21. Identify the province with the highest number of cases.
 
 --22. Retrieve the youngest suspect in the dataset.
+
 --23. Retrieve the oldest suspect in the dataset.
 Select * from crime_table 
 order by Age DESC;
