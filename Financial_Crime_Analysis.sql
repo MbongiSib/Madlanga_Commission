@@ -3,7 +3,8 @@
 USE FIN_CRIME
 SELECT * from crime_table;
 --2. Count the total number of cases in the table.
-
+SELECT COUNT (RecordID) AS num_cases
+FROM crime_table
 --3. Count the number of cases in each province.
 SELECT COUNT (RecordID) AS Mpumalanga
 FROM crime_table
@@ -170,7 +171,31 @@ Where RecordID > 0;
 
 --22. Retrieve the youngest suspect in the dataset.
 --23. Retrieve the oldest suspect in the dataset.
+Select * from crime_table 
+order by Age DESC;
 --24. Count the number of cases handled by each investigating officer.
+Select distinct InvestigatingOfficer
+from crime_table;
+
+Select Count(RecordID) As OfficerMabena
+from crime_table 
+Where InvestigatingOfficer Like '%Mabena'
+
+Select Count(RecordID) As OfficerNaidoo
+from crime_table 
+Where InvestigatingOfficer Like '%Naidoo';
+
+Select Count(RecordID) As OfficerSmith
+from crime_table 
+Where InvestigatingOfficer Like '%Smith';
+
+Select Count(RecordID) As OfficerMoyo
+from crime_table 
+Where InvestigatingOfficer Like '%Moyo';
+
+Select Count(RecordID) As OfficerNkosi
+from crime_table 
+Where InvestigatingOfficer = 'Officer Nkosi';
 --25. Calculate the average Estimated Fraud Amount per crime type.
 --26. Display all cases occurring in Gauteng province.
 --27. Retrieve all Fraud cases classified as High risk.
