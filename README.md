@@ -1,2 +1,2 @@
-# Madlanga_Commission
+# ketro_sithole
 This is a project is an SQL project that investigates Financial Crimes in south Africa. In the project we explore the data.
