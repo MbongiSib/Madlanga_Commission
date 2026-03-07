@@ -39,10 +39,9 @@ Select Province ,count(RecordID) As numOfCases
 from crime_table
 group by Province;
 
---4. Retrieve all cases where the crime type is Fraud. (The number of cases is 113)
+--4. Retrieve all cases where the crime type is Fraud.
 SELECT * from crime_table
 Where CrimeType='Fraud';
-
 --5. Count the number of cases for each crime type.
 SELECT COUNT (RecordID) AS FraudNumbers
 from crime_table
